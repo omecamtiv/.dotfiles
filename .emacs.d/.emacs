@@ -487,7 +487,7 @@
        (defvar visual-fill-column-width nil)
        (defvar visual-fill-column-center-text nil)
        (setq
-        visual-fill-column-width 145
+        visual-fill-column-width (- (display-pixel-width) 4)
         visual-fill-column-center-text t)
        (visual-fill-column-mode 1))
 
@@ -532,7 +532,7 @@
      (defun sn/org-babel-tangle-config ()
        "Tangle only Emacs.org under ~/.emacs.d folder."
        (when (string-equal (buffer-file-name)
-                           (expand-file-name "~/.emacs.d/.emacs"))
+                           (expand-file-name "~/.dotfiles/.emacs.d/.emacs"))
          ;; Dynamic scoping
          (let ((org-confirm-babel-evaluate nil))
            (org-babel-tangle))))
