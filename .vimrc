@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " Add all plugins here
 Plug 'tmhedberg/SimpylFold'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'rhysd/vim-clang-format'
