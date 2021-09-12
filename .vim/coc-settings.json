@@ -1,16 +1,12 @@
 {
     "coc.preferences.formatOnSaveFiletypes": [
         "cpp",
-        "python",
         "html",
+        "python",
         "css",
         "markdown",
         "json"
     ],
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Path": "/data/data/com.termux/files/usr/bin/autopep8",
     "coc.preferences.extensionUpdateCheck": "weekly",
     "prettier.disableLanguages": ["vue", "html"]
 }

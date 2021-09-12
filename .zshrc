@@ -2,8 +2,9 @@ setopt PROMPT_SUBST
 export TERM=xterm-24bits
 
 # Set Git Completion
-autoload -Uz compinit && compinit
-fpath=(~/.zsh/git $fpath)
+fpath=($HOME/.zsh/site-functions $fpath)
+autoload -U compinit
+compinit -i
 zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # Set virtualenvwrapper
