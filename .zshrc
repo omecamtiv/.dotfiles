@@ -2,6 +2,7 @@ setopt PROMPT_SUBST
 export TERM=xterm-24bits
 
 # Set Git Completion
+zstyle ':completion:*:*:git:*' script $HOME/.git-completion.bash
 fpath=($HOME/.zsh/site-functions $fpath)
 autoload -U compinit
 compinit -i
