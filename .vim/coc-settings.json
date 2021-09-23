@@ -1,0 +1,12 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "cpp",
+        "html",
+        "python",
+        "css",
+        "markdown",
+        "json"
+    ],
+    "coc.preferences.extensionUpdateCheck": "weekly",
+    "prettier.disableLanguages": ["vue", "html"]
+}
