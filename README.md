@@ -1,3 +1,3 @@
 # .dotfiles
 
-This repo branch contains my all dotfiles for termux.
+This repo branch contains my all dotfiles for Termux.
