@@ -7,12 +7,14 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/omecamtiv/.zshrc'
 
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
 
 # Set Git Completion
+# zstyle ':completion:*:*:git:*' script $HOME/.git-completion.bash
 fpath+=$HOME/.zsh/site-functions
+
+autoload -Uz compinit
+compinit
 
 # Typewritten Prompt
 fpath+=$HOME/.zsh/typewritten
