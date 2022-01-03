@@ -52,9 +52,6 @@ autocmd FileType python map <buffer> <F5> <Esc>:! clear;python %<CR>
 
 " C++ Files Settings
 autocmd FileType cpp map <F5> <Esc>:!clear;./output<CR>
-" c++ templates
-autocmd BufNewFile *.cpp 0r ~/.vim/templates/c++/main.cpp
-autocmd BufNewFile *.hpp 0r ~/.vim/templates/c++/header.hpp
 
 " Shorcut Maps
 nnoremap <C-s> :w<CR>
@@ -73,6 +70,7 @@ command ZshEnv execute "e ~/.zshenv"
 " PLUGINS SETTINGS
 "
 " Clang Format Settings
+let g:clang_format#code_style='llvm'
 let g:clang_format#auto_format=1
 let g:clang_format#code_style='llvm'
 
