@@ -74,10 +74,20 @@ command ZshEnv execute "e ~/.zshenv"
 "
 " Clang Format Settings
 let g:clang_format#auto_format=1
+let g:clang_format#code_style='llvm'
 
 " IndentLine Settings
 let g:indentLine_color_term=8
 let g:indentLine_char='│'
+
+" FZF Settings
+set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+let g:rg_derive_root='true'
+
+nnoremap \ :Rg<CR>
+nnoremap <C-T> :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>s :BLines<CR>
 
 " COC_NVIM Settings
 inoremap <silent><expr> <TAB>
