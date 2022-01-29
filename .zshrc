@@ -10,7 +10,7 @@ zstyle :compinstall filename '/home/omecamtiv/.zshrc'
 # End of lines added by compinstall
 
 # Set Git Completion
-# zstyle ':completion:*:*:git:*' script $HOME/.git-completion.bash
+zstyle ':completion:*:*:git:*' script $HOME/.git-completion.bash
 fpath+=$HOME/.zsh/site-functions
 
 autoload -Uz compinit
@@ -22,3 +22,9 @@ export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
 autoload -Uz promptinit
 promptinit
 prompt typewritten
+
+# Aliases
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
