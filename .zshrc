@@ -15,6 +15,10 @@ compinit -i
 # Aliases
 alias str='tree --dirsfirst -a -C -I ".git|.cache|build"'
 alias ec='emacsclient -t -s ~/.emacs.d/server'
+alias l='ls -CF' 
+alias la='ls -A' 
+alias ll='ls -alF' 
+alias ls='ls --color=auto'
 
 # Banner
 clear
