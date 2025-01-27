@@ -24,7 +24,18 @@ promptinit
 prompt typewritten
 
 # Aliases
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias ls='ls --color=auto'
+alias l='lsd -F'
+alias la='lsd -A'
+alias ll='lsd -alF'
+alias lt='lsd --tree'
+alias lg='lazygit'
+alias ld='lazydocker'
+alias sudo='sudo -E'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$PATH:/opt/nvim-linux64/bin"
