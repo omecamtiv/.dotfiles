@@ -1,33 +1,30 @@
-setopt PROMPT_SUBST
-export TERM=xterm-24bits
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/data/data/com.termux/files/home/.zshrc'
 
 # Set Git Completion
 zstyle ':completion:*:*:git:*' script $HOME/.git-completion.bash
-fpath=($HOME/.zsh/site-functions $fpath)
-autoload -U compinit
-compinit -i
+fpath+=$HOME/.zsh/site-functions
 
-# # Set virtualenvwrapper
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/WorkSpace/Python
-# source /data/data/com.termux/files/usr/bin/virtualenvwrapper.sh
-
-# Aliases
-alias str='tree --dirsfirst -a -C -I ".git|.cache|build"'
-alias ec='emacsclient -t -s ~/.emacs.d/server'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias ls='ls --color=auto'
-
-# Banner
-clear
-echo -e '\n'
-figlet -d ~/.figlet-font -f 3-d -c 'TERMUX'|toilet -f term --gay
-echo -e '\n'
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 # Typewritten Prompt
 fpath+=$HOME/.zsh/typewritten
+export TYPEWRITTEN_PROMPT_LAYOUT="singleline_verbose"
 autoload -Uz promptinit
 promptinit
 prompt typewritten
+
+# Aliases
+alias l='lsd -F'
+alias la='lsd -A'
+alias ll='lsd -alF'
+alias lt='lsd --tree'
+alias lg='lazygit'
